@@ -1,1 +1,98 @@
-/* Add styles here */
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+}
+
+h1 {
+  color: #1a73e8;
+  margin-bottom: 2rem;
+}
+
+.ball-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  min-height: 60px;
+  align-items: center;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  animation: bounce 0.5s ease;
+}
+
+.bonus-wrapper {
+  margin-top: 20px;
+  border-top: 1px dashed #ccc;
+  padding-top: 20px;
+}
+
+.bonus-text {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+button {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #1557b0;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+@keyframes bounce {
+  0% { transform: scale(0.3); opacity: 0; }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Ball Colors based on number ranges */
+.ball.range-1 { background: radial-gradient(circle at 30% 30%, #fbc02d, #f9a825); } /* 1-10 yellow */
+.ball.range-2 { background: radial-gradient(circle at 30% 30%, #1e88e5, #1565c0); } /* 11-20 blue */
+.ball.range-3 { background: radial-gradient(circle at 30% 30%, #e53935, #c62828); } /* 21-30 red */
+.ball.range-4 { background: radial-gradient(circle at 30% 30%, #757575, #424242); } /* 31-40 gray */
+.ball.range-5 { background: radial-gradient(circle at 30% 30%, #43a047, #2e7d32); } /* 41-45 green */
