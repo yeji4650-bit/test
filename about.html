@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>서비스 소개 - 로또 번호 추첨기</title>
+  <meta name="description" content="로또 번호 추첨기 서비스 소개. 무료로 제공되는 로또 번호 자동 생성 서비스입니다." />
+  <meta name="google-adsense-account" content="ca-pub-2824802689617683">
+  <link href='/style.css' rel='stylesheet'>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2824802689617683" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">로또 추첨기</a>
+      <nav class="header-nav">
+        <a href="/">홈</a>
+        <a href="/about.html" class="active">서비스 소개</a>
+        <a href="/contact.html">제휴문의</a>
+      </nav>
+      <button id="theme-toggle" class="theme-btn">다크모드</button>
+    </div>
+  </header>
+
+  <main class="main-wrap">
+    <section class="info-section" style="padding-top: 3rem;">
+      <div class="info-inner">
+        <h1>서비스 소개</h1>
+
+        <h2>로또 번호 추첨기란?</h2>
+        <p>로또 번호 추첨기는 대한민국 로또 6/45 복권을 위한 무료 번호 자동 생성 서비스입니다. 복잡한 설치나 회원가입 없이 누구나 즉시 사용할 수 있습니다. 버튼 하나로 1회에 5게임의 번호를 동시에 생성하여 다양한 조합을 한눈에 확인할 수 있습니다.</p>
+
+        <h2>주요 기능</h2>
+        <ul class="feature-list">
+          <li><strong>5게임 동시 생성:</strong> 한 번의 클릭으로 5세트의 로또 번호를 생성합니다.</li>
+          <li><strong>완전 무작위 추출:</strong> 1~45 사이의 번호를 공정하게 무작위로 선택합니다.</li>
+          <li><strong>보너스 번호 포함:</strong> 6개의 당첨 번호와 1개의 보너스 번호를 함께 제공합니다.</li>
+          <li><strong>번호대별 색상 구분:</strong> 1~10(노랑), 11~20(파랑), 21~30(빨강), 31~40(회색), 41~45(초록)으로 직관적으로 구분합니다.</li>
+          <li><strong>다크/라이트 모드:</strong> 눈에 편한 화면 모드를 선택할 수 있습니다.</li>
+        </ul>
+
+        <h2>이용 방법</h2>
+        <ol class="how-to">
+          <li>메인 페이지의 <strong>추첨하기</strong> 버튼을 클릭합니다.</li>
+          <li>5게임의 로또 번호가 자동으로 생성됩니다.</li>
+          <li>마음에 드는 번호 조합을 선택하여 복권 구매에 활용하세요.</li>
+          <li>새로운 번호를 원하면 다시 추첨하기 버튼을 클릭하면 됩니다.</li>
+        </ol>
+
+        <h2>유의사항</h2>
+        <p class="disclaimer">본 서비스에서 생성되는 번호는 통계적 알고리즘이나 과거 당첨 번호를 분석한 결과가 아닌, 완전한 무작위(Random) 방식으로 생성됩니다. 로또는 확률 게임이며, 어떠한 방법으로도 당첨을 예측하거나 보장할 수 없습니다. 복권 구매는 성인에 한하며, 본인의 판단 하에 책임감 있게 이용하시기 바랍니다.</p>
+
+        <h2>문의 및 제휴</h2>
+        <p>서비스 이용 중 불편한 점이나 제휴 관련 문의는 <a href="/contact.html" style="color: var(--btn-bg);">제휴문의 페이지</a>를 통해 연락해 주세요. 빠르게 답변드리겠습니다.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <nav class="footer-nav">
+        <a href="/">홈</a>
+        <a href="/about.html">서비스 소개</a>
+        <a href="/contact.html">제휴문의</a>
+        <a href="/privacy.html">개인정보처리방침</a>
+      </nav>
+      <p class="footer-copy">© 2025 로또 추첨기. 본 서비스의 번호는 참고용이며 당첨을 보장하지 않습니다.</p>
+    </div>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+      themeToggle.textContent = '라이트모드';
+    }
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      const isDark = document.body.classList.contains('dark');
+      themeToggle.textContent = isDark ? '라이트모드' : '다크모드';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
